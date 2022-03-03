@@ -11,5 +11,8 @@ export class EmployeesComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  adTelepules(telepules: string){
+    console.log("Telepules: ",telepules);
+  }
 
 }

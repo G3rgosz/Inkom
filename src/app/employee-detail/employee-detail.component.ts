@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-employee-detail',
@@ -7,9 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class EmployeeDetailComponent implements OnInit {
   @Input() employeeName = "";
+  @Output() ujTelepulesEsemeny = new EventEmitter<string>();
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  adTelepules(telepules: string){
+    this.ujTelepulesEsemeny.emit(telepules);
+  }
 }

@@ -1,5 +1,8 @@
 <div class="detail">
     <h1>Választott</h1>
     <p>{{employeeName}}</p>
+    <label for="telepules"></label>
+    <input type="text" id="telepules" #ujTelepules>
+    <button (click)="adTelepules(ujTelepules.value)">Hozzáad</button>
 </div>
 
